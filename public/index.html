@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="description" content="Explore Pineapple DEX, a Web3 MVP platform with swap functionality, live charting, quick token scanning, and advanced limit orders. Seamlessly connect your Ethereum wallet and trade ERC-20 tokens effortlessly." />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Pineapple</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const theme = localStorage.getItem('theme') === 'dark' ? 'theme-dark' :'theme-light';
+      document.body.className = theme;
+    });
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <button id="theme-toggle" style="display: none;">Toggle Theme</button>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <script>
+   function addEventToButton(){
+     console.log("this  event is hits")
+   }
+
+    // var allButtons = document.getElementsByTagName("button");
+    // allButtons.addEventListener("mousedown", addEventToButton);
+    // alert("Pineapple DEX is currently in development. Please check back later.")
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      document.body.className = newTheme === 'light' ? 'theme-light' : 'theme-dark';
+    });
+    
+  </script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+</body>
+
+</html>
