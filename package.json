@@ -4,6 +4,11 @@
   "private": true,
   "dependencies": {
     "@1inch/limit-order-sdk": "^4.0.0",
+    "@cere-activity-sdk/events": "^0.0.2",
+    "@cere-activity-sdk/signers": "^0.0.2",
+    "@cere/embed-wallet": "^0.22.2",
+    "@cere/torus-embed": "^0.2.9",
+    "uuid": "^11.0.3",
     "@firebase/app": "^0.10.7",
     "@firebase/messaging": "^0.12.10",
     "@testing-library/jest-dom": "^5.17.0",
